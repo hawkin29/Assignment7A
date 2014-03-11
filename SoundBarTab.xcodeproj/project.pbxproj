@@ -14,14 +14,18 @@
 		374BF78718CFC3D300175181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF78618CFC3D300175181 /* main.m */; };
 		374BF78B18CFC3D300175181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF78A18CFC3D300175181 /* AppDelegate.m */; };
 		374BF78E18CFC3D300175181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374BF78C18CFC3D300175181 /* Main.storyboard */; };
-		374BF79118CFC3D300175181 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF79018CFC3D300175181 /* FirstViewController.m */; };
-		374BF79418CFC3D300175181 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF79318CFC3D300175181 /* SecondViewController.m */; };
+		374BF79118CFC3D300175181 /* CatSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF79018CFC3D300175181 /* CatSoundViewController.m */; };
+		374BF79418CFC3D300175181 /* SportsSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF79318CFC3D300175181 /* SportsSoundViewController.m */; };
 		374BF79618CFC3D300175181 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374BF79518CFC3D300175181 /* Images.xcassets */; };
 		374BF79D18CFC3D300175181 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374BF79C18CFC3D300175181 /* XCTest.framework */; };
 		374BF79E18CFC3D300175181 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374BF77A18CFC3D300175181 /* Foundation.framework */; };
 		374BF79F18CFC3D300175181 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374BF77E18CFC3D300175181 /* UIKit.framework */; };
 		374BF7A718CFC3D300175181 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7A518CFC3D300175181 /* InfoPlist.strings */; };
 		374BF7A918CFC3D300175181 /* SoundBarTabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF7A818CFC3D300175181 /* SoundBarTabTests.m */; };
+		374BF7B318CFC3E500175181 /* Black_Cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B218CFC3E500175181 /* Black_Cat.png */; };
+		374BF7B518CFC3EC00175181 /* index.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B418CFC3EC00175181 /* index.png */; };
+		374BF7B718CFC3FD00175181 /* Baseball_Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B618CFC3FD00175181 /* Baseball_Ball.png */; };
+		374BF7B918CFC40300175181 /* Football_Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B818CFC40300175181 /* Football_Ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +50,20 @@
 		374BF78918CFC3D300175181 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		374BF78A18CFC3D300175181 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		374BF78D18CFC3D300175181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		374BF78F18CFC3D300175181 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		374BF79018CFC3D300175181 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		374BF79218CFC3D300175181 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		374BF79318CFC3D300175181 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		374BF78F18CFC3D300175181 /* CatSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatSoundViewController.h; sourceTree = "<group>"; };
+		374BF79018CFC3D300175181 /* CatSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatSoundViewController.m; sourceTree = "<group>"; };
+		374BF79218CFC3D300175181 /* SportsSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportsSoundViewController.h; sourceTree = "<group>"; };
+		374BF79318CFC3D300175181 /* SportsSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SportsSoundViewController.m; sourceTree = "<group>"; };
 		374BF79518CFC3D300175181 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		374BF79B18CFC3D300175181 /* SoundBarTabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundBarTabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		374BF79C18CFC3D300175181 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		374BF7A418CFC3D300175181 /* SoundBarTabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundBarTabTests-Info.plist"; sourceTree = "<group>"; };
 		374BF7A618CFC3D300175181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		374BF7A818CFC3D300175181 /* SoundBarTabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundBarTabTests.m; sourceTree = "<group>"; };
+		374BF7B218CFC3E500175181 /* Black_Cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black_Cat.png; sourceTree = "<group>"; };
+		374BF7B418CFC3EC00175181 /* index.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index.png; sourceTree = "<group>"; };
+		374BF7B618CFC3FD00175181 /* Baseball_Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Baseball_Ball.png; sourceTree = "<group>"; };
+		374BF7B818CFC40300175181 /* Football_Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Football_Ball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +126,10 @@
 				374BF78918CFC3D300175181 /* AppDelegate.h */,
 				374BF78A18CFC3D300175181 /* AppDelegate.m */,
 				374BF78C18CFC3D300175181 /* Main.storyboard */,
-				374BF78F18CFC3D300175181 /* FirstViewController.h */,
-				374BF79018CFC3D300175181 /* FirstViewController.m */,
-				374BF79218CFC3D300175181 /* SecondViewController.h */,
-				374BF79318CFC3D300175181 /* SecondViewController.m */,
+				374BF78F18CFC3D300175181 /* CatSoundViewController.h */,
+				374BF79018CFC3D300175181 /* CatSoundViewController.m */,
+				374BF79218CFC3D300175181 /* SportsSoundViewController.h */,
+				374BF79318CFC3D300175181 /* SportsSoundViewController.m */,
 				374BF79518CFC3D300175181 /* Images.xcassets */,
 				374BF78118CFC3D300175181 /* Supporting Files */,
 			);
@@ -131,6 +139,10 @@
 		374BF78118CFC3D300175181 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				374BF7BD18CFC47800175181 /* Football Sounds */,
+				374BF7BC18CFC46E00175181 /* Baseball Sounds */,
+				374BF7BB18CFC45C00175181 /* Cat Sounds */,
+				374BF7BA18CFC44500175181 /* Pictures */,
 				374BF78218CFC3D300175181 /* SoundBarTab-Info.plist */,
 				374BF78318CFC3D300175181 /* InfoPlist.strings */,
 				374BF78618CFC3D300175181 /* main.m */,
@@ -155,6 +167,38 @@
 				374BF7A518CFC3D300175181 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		374BF7BA18CFC44500175181 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				374BF7B418CFC3EC00175181 /* index.png */,
+				374BF7B818CFC40300175181 /* Football_Ball.png */,
+				374BF7B618CFC3FD00175181 /* Baseball_Ball.png */,
+				374BF7B218CFC3E500175181 /* Black_Cat.png */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		374BF7BB18CFC45C00175181 /* Cat Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Cat Sounds";
+			sourceTree = "<group>";
+		};
+		374BF7BC18CFC46E00175181 /* Baseball Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Baseball Sounds";
+			sourceTree = "<group>";
+		};
+		374BF7BD18CFC47800175181 /* Football Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Football Sounds";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +277,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374BF7B318CFC3E500175181 /* Black_Cat.png in Resources */,
+				374BF7B918CFC40300175181 /* Football_Ball.png in Resources */,
+				374BF7B718CFC3FD00175181 /* Baseball_Ball.png in Resources */,
+				374BF7B518CFC3EC00175181 /* index.png in Resources */,
 				374BF79618CFC3D300175181 /* Images.xcassets in Resources */,
 				374BF78518CFC3D300175181 /* InfoPlist.strings in Resources */,
 				374BF78E18CFC3D300175181 /* Main.storyboard in Resources */,
@@ -254,9 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374BF79418CFC3D300175181 /* SecondViewController.m in Sources */,
+				374BF79418CFC3D300175181 /* SportsSoundViewController.m in Sources */,
 				374BF78B18CFC3D300175181 /* AppDelegate.m in Sources */,
-				374BF79118CFC3D300175181 /* FirstViewController.m in Sources */,
+				374BF79118CFC3D300175181 /* CatSoundViewController.m in Sources */,
 				374BF78718CFC3D300175181 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

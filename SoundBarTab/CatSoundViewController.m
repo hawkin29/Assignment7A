@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Kevin Matthew Hawkinson. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CatSoundViewController.h"
 
-@interface FirstViewController ()
+@interface CatSoundViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation CatSoundViewController
 
 - (void)viewDidLoad
 {

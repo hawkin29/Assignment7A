@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Kevin Matthew Hawkinson. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "SportsSoundViewController.h"
 
-@interface SecondViewController ()
+@interface SportsSoundViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation SportsSoundViewController
 
 - (void)viewDidLoad
 {
