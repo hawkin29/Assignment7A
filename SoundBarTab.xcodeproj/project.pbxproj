@@ -23,9 +23,19 @@
 		374BF7A718CFC3D300175181 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7A518CFC3D300175181 /* InfoPlist.strings */; };
 		374BF7A918CFC3D300175181 /* SoundBarTabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 374BF7A818CFC3D300175181 /* SoundBarTabTests.m */; };
 		374BF7B318CFC3E500175181 /* Black_Cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B218CFC3E500175181 /* Black_Cat.png */; };
-		374BF7B518CFC3EC00175181 /* index.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B418CFC3EC00175181 /* index.png */; };
 		374BF7B718CFC3FD00175181 /* Baseball_Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B618CFC3FD00175181 /* Baseball_Ball.png */; };
 		374BF7B918CFC40300175181 /* Football_Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 374BF7B818CFC40300175181 /* Football_Ball.png */; };
+		378B573118D1183F00C7F45E /* glyphicons_311_baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B573018D1183F00C7F45E /* glyphicons_311_baseball.png */; };
+		378B573418D1192000C7F45E /* CatSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 378B573318D1192000C7F45E /* CatSound.m */; };
+		378B573C18D11ADF00C7F45E /* cat-angry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B573518D11ADF00C7F45E /* cat-angry.mp3 */; };
+		378B573D18D11ADF00C7F45E /* cat-furious.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B573618D11ADF00C7F45E /* cat-furious.mp3 */; };
+		378B573E18D11ADF00C7F45E /* cat-meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B573718D11ADF00C7F45E /* cat-meow.mp3 */; };
+		378B573F18D11ADF00C7F45E /* cat-sad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B573818D11ADF00C7F45E /* cat-sad.mp3 */; };
+		378B574018D11ADF00C7F45E /* cat-scared.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B573918D11ADF00C7F45E /* cat-scared.mp3 */; };
+		378B574118D11ADF00C7F45E /* cat-squeak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B573A18D11ADF00C7F45E /* cat-squeak.mp3 */; };
+		378B574218D11ADF00C7F45E /* cat-whining.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B573B18D11ADF00C7F45E /* cat-whining.mp3 */; };
+		378B574B18D11E1000C7F45E /* SportsSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 378B574A18D11E1000C7F45E /* SportsSound.m */; };
+		378B574D18D11EAF00C7F45E /* youreout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 378B574C18D11EAF00C7F45E /* youreout.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +71,21 @@
 		374BF7A618CFC3D300175181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		374BF7A818CFC3D300175181 /* SoundBarTabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundBarTabTests.m; sourceTree = "<group>"; };
 		374BF7B218CFC3E500175181 /* Black_Cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black_Cat.png; sourceTree = "<group>"; };
-		374BF7B418CFC3EC00175181 /* index.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index.png; sourceTree = "<group>"; };
 		374BF7B618CFC3FD00175181 /* Baseball_Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Baseball_Ball.png; sourceTree = "<group>"; };
 		374BF7B818CFC40300175181 /* Football_Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Football_Ball.png; sourceTree = "<group>"; };
+		378B573018D1183F00C7F45E /* glyphicons_311_baseball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_311_baseball.png; sourceTree = "<group>"; };
+		378B573218D1192000C7F45E /* CatSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CatSound.h; path = ../CatSound.h; sourceTree = "<group>"; };
+		378B573318D1192000C7F45E /* CatSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CatSound.m; path = ../CatSound.m; sourceTree = "<group>"; };
+		378B573518D11ADF00C7F45E /* cat-angry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-angry.mp3"; sourceTree = "<group>"; };
+		378B573618D11ADF00C7F45E /* cat-furious.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-furious.mp3"; sourceTree = "<group>"; };
+		378B573718D11ADF00C7F45E /* cat-meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-meow.mp3"; sourceTree = "<group>"; };
+		378B573818D11ADF00C7F45E /* cat-sad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-sad.mp3"; sourceTree = "<group>"; };
+		378B573918D11ADF00C7F45E /* cat-scared.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-scared.mp3"; sourceTree = "<group>"; };
+		378B573A18D11ADF00C7F45E /* cat-squeak.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-squeak.mp3"; sourceTree = "<group>"; };
+		378B573B18D11ADF00C7F45E /* cat-whining.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-whining.mp3"; sourceTree = "<group>"; };
+		378B574918D11E1000C7F45E /* SportsSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportsSound.h; sourceTree = "<group>"; };
+		378B574A18D11E1000C7F45E /* SportsSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportsSound.m; sourceTree = "<group>"; };
+		378B574C18D11EAF00C7F45E /* youreout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youreout.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +148,10 @@
 				374BF78918CFC3D300175181 /* AppDelegate.h */,
 				374BF78A18CFC3D300175181 /* AppDelegate.m */,
 				374BF78C18CFC3D300175181 /* Main.storyboard */,
+				378B574918D11E1000C7F45E /* SportsSound.h */,
+				378B574A18D11E1000C7F45E /* SportsSound.m */,
+				378B573218D1192000C7F45E /* CatSound.h */,
+				378B573318D1192000C7F45E /* CatSound.m */,
 				374BF78F18CFC3D300175181 /* CatSoundViewController.h */,
 				374BF79018CFC3D300175181 /* CatSoundViewController.m */,
 				374BF79218CFC3D300175181 /* SportsSoundViewController.h */,
@@ -172,8 +198,8 @@
 		374BF7BA18CFC44500175181 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				374BF7B418CFC3EC00175181 /* index.png */,
 				374BF7B818CFC40300175181 /* Football_Ball.png */,
+				378B573018D1183F00C7F45E /* glyphicons_311_baseball.png */,
 				374BF7B618CFC3FD00175181 /* Baseball_Ball.png */,
 				374BF7B218CFC3E500175181 /* Black_Cat.png */,
 			);
@@ -183,6 +209,13 @@
 		374BF7BB18CFC45C00175181 /* Cat Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				378B573518D11ADF00C7F45E /* cat-angry.mp3 */,
+				378B573618D11ADF00C7F45E /* cat-furious.mp3 */,
+				378B573718D11ADF00C7F45E /* cat-meow.mp3 */,
+				378B573818D11ADF00C7F45E /* cat-sad.mp3 */,
+				378B573918D11ADF00C7F45E /* cat-scared.mp3 */,
+				378B573A18D11ADF00C7F45E /* cat-squeak.mp3 */,
+				378B573B18D11ADF00C7F45E /* cat-whining.mp3 */,
 			);
 			name = "Cat Sounds";
 			sourceTree = "<group>";
@@ -190,6 +223,7 @@
 		374BF7BC18CFC46E00175181 /* Baseball Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				378B574C18D11EAF00C7F45E /* youreout.mp3 */,
 			);
 			name = "Baseball Sounds";
 			sourceTree = "<group>";
@@ -278,11 +312,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				374BF7B318CFC3E500175181 /* Black_Cat.png in Resources */,
+				378B573D18D11ADF00C7F45E /* cat-furious.mp3 in Resources */,
+				378B574218D11ADF00C7F45E /* cat-whining.mp3 in Resources */,
+				378B573C18D11ADF00C7F45E /* cat-angry.mp3 in Resources */,
+				378B574D18D11EAF00C7F45E /* youreout.mp3 in Resources */,
+				378B573E18D11ADF00C7F45E /* cat-meow.mp3 in Resources */,
 				374BF7B918CFC40300175181 /* Football_Ball.png in Resources */,
 				374BF7B718CFC3FD00175181 /* Baseball_Ball.png in Resources */,
-				374BF7B518CFC3EC00175181 /* index.png in Resources */,
+				378B573F18D11ADF00C7F45E /* cat-sad.mp3 in Resources */,
+				378B574018D11ADF00C7F45E /* cat-scared.mp3 in Resources */,
+				378B574118D11ADF00C7F45E /* cat-squeak.mp3 in Resources */,
 				374BF79618CFC3D300175181 /* Images.xcassets in Resources */,
 				374BF78518CFC3D300175181 /* InfoPlist.strings in Resources */,
+				378B573118D1183F00C7F45E /* glyphicons_311_baseball.png in Resources */,
 				374BF78E18CFC3D300175181 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,8 +344,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378B574B18D11E1000C7F45E /* SportsSound.m in Sources */,
 				374BF79418CFC3D300175181 /* SportsSoundViewController.m in Sources */,
 				374BF78B18CFC3D300175181 /* AppDelegate.m in Sources */,
+				378B573418D1192000C7F45E /* CatSound.m in Sources */,
 				374BF79118CFC3D300175181 /* CatSoundViewController.m in Sources */,
 				374BF78718CFC3D300175181 /* main.m in Sources */,
 			);
@@ -514,6 +558,7 @@
 				374BF7AE18CFC3D300175181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		374BF7AF18CFC3D300175181 /* Build configuration list for PBXNativeTarget "SoundBarTabTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +567,7 @@
 				374BF7B118CFC3D300175181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

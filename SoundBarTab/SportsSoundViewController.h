@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SportsSoundViewController : UIViewController
+@interface SportsSoundViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @end

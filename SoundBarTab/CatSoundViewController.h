@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CatSoundViewController : UIViewController
+@interface CatSoundViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @end
