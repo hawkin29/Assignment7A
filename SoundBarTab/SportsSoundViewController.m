@@ -73,6 +73,7 @@
     SportsSound* sound = [self.baseballSounds objectAtIndex:indexPath.row];
     [sound.audioPlayer prepareToPlay];
     [sound.audioPlayer play];
+
 }
 
 @end
