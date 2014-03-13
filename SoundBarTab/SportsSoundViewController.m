@@ -49,7 +49,26 @@
     baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.baseballSounds addObject:baseballSound];
 
-
+    soundPath = [[NSBundle mainBundle] pathForResource:@"basehit" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Base Hit!!";
+    baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.baseballSounds addObject:baseballSound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"strikethree" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Strike Three!!";
+    baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.baseballSounds addObject:baseballSound];
+    
+//    soundPath = [[NSBundle mainBundle] pathForResource:@"tackle" ofType:@"mp3"];
+//    soundUrl = [NSURL fileURLWithPath:soundPath];
+//    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+//    name = @"Tackle!";
+//    baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
+//    [self.footballSounds addObject:baseballSound];
 }
 
 
@@ -61,11 +80,22 @@
 
 -(UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString* CellIdentifier=@"Cell1";
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = [[self.baseballSounds objectAtIndex:indexPath.row] name];
-    
-    return cell;
+  //  if ([indexPath row] == 0)
+  //  {
+        static NSString* CellIdentifier=@"Cell1";
+        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = [[self.baseballSounds objectAtIndex:indexPath.row] name];
+        
+        return cell;
+   // }
+//    else
+//    {
+//        static NSString* CellIdentifier=@"Cell2";
+//        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//        cell.textLabel.text = [[self.footballSounds objectAtIndex:indexPath.row] name];
+//        
+//        return cell;
+//    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
