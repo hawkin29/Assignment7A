@@ -111,7 +111,10 @@
     CatSound* sound = [self.sounds objectAtIndex:indexPath.row];
     [sound.audioPlayer prepareToPlay];
     [sound.audioPlayer play];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
 
 @end
 

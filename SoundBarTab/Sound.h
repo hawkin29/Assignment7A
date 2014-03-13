@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-@interface SportsSound : NSObject
+@interface Sound : NSObject
 
 @property(nonatomic,strong) NSString* name;
 @property(nonatomic,strong) AVAudioPlayer* audioPlayer;

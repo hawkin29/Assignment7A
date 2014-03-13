@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Kevin Hawkinson. All rights reserved.
 //
 
-#import "SportsSound.h"
+#import "Sound.h"
 
-@implementation SportsSound
+@implementation Sound
 
 
 -(id)init

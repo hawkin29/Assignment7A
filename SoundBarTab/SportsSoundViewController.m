@@ -7,7 +7,7 @@
 //
 
 #import "SportsSoundViewController.h"
-#import "SportsSound.h"
+#import "Sound.h"
 
 
 @interface SportsSoundViewController ()
@@ -40,71 +40,111 @@
     NSURL* soundUrl;
     NSString* soundPath;
     NSString* name;
-    SportsSound* baseballSound;
+    Sound* sound;
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"youreout" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"You're Out!!";
-    baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
-    [self.baseballSounds addObject:baseballSound];
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.baseballSounds addObject:sound];
 
     soundPath = [[NSBundle mainBundle] pathForResource:@"basehit" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Base Hit!!";
-    baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
-    [self.baseballSounds addObject:baseballSound];
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.baseballSounds addObject:sound];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"strikethree" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Strike Three!!";
-    baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
-    [self.baseballSounds addObject:baseballSound];
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.baseballSounds addObject:sound];
     
-//    soundPath = [[NSBundle mainBundle] pathForResource:@"tackle" ofType:@"mp3"];
-//    soundUrl = [NSURL fileURLWithPath:soundPath];
-//    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
-//    name = @"Tackle!";
-//    baseballSound = [[SportsSound alloc] initWithName:name audioPlayer:audioPlayer];
-//    [self.footballSounds addObject:baseballSound];
+    soundPath = [[NSBundle mainBundle] pathForResource:@"tackle" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Tackle!";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.footballSounds addObject:sound];
 }
 
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.baseballSounds count] + [self.footballSounds count];
+    if (section == 0)
+    {
+       return [self.baseballSounds count];
+    }
+    else
+    {
+        return [self.footballSounds count];
+    }
+   
 }
 
 -(UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  //  if ([indexPath row] == 0)
-  //  {
+    if (indexPath.section == 0)
+    {
         static NSString* CellIdentifier=@"Cell1";
         UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         cell.textLabel.text = [[self.baseballSounds objectAtIndex:indexPath.row] name];
         
         return cell;
-   // }
-//    else
-//    {
-//        static NSString* CellIdentifier=@"Cell2";
-//        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-//        cell.textLabel.text = [[self.footballSounds objectAtIndex:indexPath.row] name];
-//        
-//        return cell;
-//    }
+    }
+    else
+    {
+        static NSString* CellIdentifier=@"Cell2";
+        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = [[self.footballSounds objectAtIndex:indexPath.row] name];
+        
+        return cell;
+    }
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SportsSound* sound = [self.baseballSounds objectAtIndex:indexPath.row];
+    Sound* sound = [self.baseballSounds objectAtIndex:indexPath.row];
     [sound.audioPlayer prepareToPlay];
     [sound.audioPlayer play];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    
+    if (section == 0)
+    {
+        return @"Baseball!!";
+    }
+    else
+    {
+        return @"Football!!";
+    }
+}
+
+
+
+//(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//
+//    if (section == 0)
+//    {
+//        
+//    }
+//}
 
 @end
 
