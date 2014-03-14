@@ -1,5 +1,5 @@
 //
-//  CatSound.m
+//  Sound.m
 //  Assignment7
 //
 //  Created by Kevin Hawkinson on 3/6/14.
@@ -24,9 +24,14 @@
     {
         _name = name;
         _audioPlayer = audioPlayer;
+        self.audioPlayer.delegate = self;
     }
     return self;
 }
 
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    [self.tableView deselectRowAtIndexPath:self.indexPath animated:YES];
+}
 
 @end

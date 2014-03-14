@@ -14,6 +14,7 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string>startup</string>
 				<string>Default</string>
 				<string>appIcon1</string>
 			</array>

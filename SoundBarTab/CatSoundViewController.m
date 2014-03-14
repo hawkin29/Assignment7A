@@ -7,10 +7,11 @@
 //
 
 #import "CatSoundViewController.h"
-#import "CatSound.h"
+#import "Sound.h"
 
 @interface CatSoundViewController ()
 @property(nonatomic, strong) NSMutableArray* sounds;
+@property(nonatomic, strong) Sound* catSound;
 @end
 
 @implementation CatSoundViewController
@@ -20,8 +21,6 @@
     [super viewDidLoad];
     self.sounds = [[NSMutableArray alloc]init];
 	[self addSounds];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,55 +36,55 @@
     NSURL* soundUrl;
     NSString* soundPath;
     NSString* name;
-    CatSound* catSound;
+    Sound* catSound;
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"cat-angry" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Angry";
-    catSound = [[CatSound alloc] initWithName:name audioPlayer:audioPlayer];
+    catSound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.sounds addObject:catSound];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"cat-furious" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Furious";
-    catSound = [[CatSound alloc] initWithName:name audioPlayer:audioPlayer];
+    catSound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.sounds addObject:catSound];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"cat-meow" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Meow";
-    catSound = [[CatSound alloc] initWithName:name audioPlayer:audioPlayer];
+    catSound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.sounds addObject:catSound];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"cat-sad" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Sad";
-    catSound = [[CatSound alloc] initWithName:name audioPlayer:audioPlayer];
+    catSound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.sounds addObject:catSound];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"cat-scared" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Scared";
-    catSound = [[CatSound alloc] initWithName:name audioPlayer:audioPlayer];
+    catSound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.sounds addObject:catSound];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"cat-squeak" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Squeak";
-    catSound = [[CatSound alloc] initWithName:name audioPlayer:audioPlayer];
+    catSound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.sounds addObject:catSound];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"cat-whining" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
     name = @"Whining";
-    catSound = [[CatSound alloc] initWithName:name audioPlayer:audioPlayer];
+    catSound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.sounds addObject:catSound];
 }
 
@@ -100,19 +99,24 @@
 {
     static NSString* CellIdentifier=@"Cell";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     cell.textLabel.text = [[self.sounds objectAtIndex:indexPath.row] name];
-    
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CatSound* sound = [self.sounds objectAtIndex:indexPath.row];
+    Sound* sound = [self.sounds objectAtIndex:indexPath.row];
+    sound.tableView = tableView;
+    sound.indexPath = indexPath;
     [sound.audioPlayer prepareToPlay];
     [sound.audioPlayer play];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
 }
+
+
+
+
 
 
 

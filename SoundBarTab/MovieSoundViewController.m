@@ -1,0 +1,251 @@
+//
+//  ViewController.m
+//  Assignment7
+//
+//  Created by Kevin Hawkinson on 3/6/14.
+//  Copyright (c) 2014 Kevin Hawkinson. All rights reserved.
+//
+
+#import "MovieSoundViewController.h"
+#import "Sound.h"
+
+
+@interface MovieSoundViewController ()
+@property(nonatomic, strong) NSMutableArray* snatchSounds;
+@property(nonatomic, strong) NSMutableArray* idiocracySounds;
+@property(nonatomic, strong) Sound* sound;
+@property(nonatomic, strong) UIColor* color;
+@end
+
+@implementation MovieSoundViewController
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.snatchSounds = [[NSMutableArray alloc]init];
+    self.idiocracySounds = [[NSMutableArray alloc]init];
+    [self addSounds];
+    
+}
+
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)addSounds
+{
+    NSError* error;
+    AVAudioPlayer* audioPlayer;
+    NSURL* soundUrl;
+    NSString* soundPath;
+    NSString* name;
+    Sound* sound;
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"borisTheBulletDodger" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Boris The Bullet Dodger";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.snatchSounds addObject:sound];
+
+    soundPath = [[NSBundle mainBundle] pathForResource:@"noWheels" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Caravan";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.snatchSounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"perrywinkleBlue" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Perrywinkle Blue";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.snatchSounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"stayDown" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Stay Down";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.snatchSounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"sweetEnough" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"I'm Sweet Enough";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.snatchSounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"welcomeToCostco" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Welcome To Costco";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.idiocracySounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"carlsJr" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Carls Jr.";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.idiocracySounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"iLikeMoney" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"I Like Money";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.idiocracySounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"theDoctor" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Doctor's Analysis";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.idiocracySounds addObject:sound];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"starbucks" ofType:@"mp3"];
+    soundUrl = [NSURL fileURLWithPath:soundPath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
+    name = @"Starbucks";
+    sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
+    [self.idiocracySounds addObject:sound];
+    
+    
+    
+}
+
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0)
+    {
+       return [self.snatchSounds count];
+    }
+    else
+    {
+        return [self.idiocracySounds count];
+    }
+   
+}
+
+-(UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        static NSString* CellIdentifier=@"Cell1";
+        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = [[self.snatchSounds objectAtIndex:indexPath.row] name];
+        self.color = cell.backgroundColor;
+        NSLog(@"%@",[cell.backgroundColor description]);
+        return cell;
+    }
+    else
+    {
+        static NSString* CellIdentifier=@"Cell2";
+        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = [[self.idiocracySounds objectAtIndex:indexPath.row] name];
+        
+        return cell;
+    }
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        Sound* sound = [self.snatchSounds objectAtIndex:indexPath.row];
+        sound.tableView = tableView;
+        sound.indexPath = indexPath;
+        [sound.audioPlayer prepareToPlay];
+        [sound.audioPlayer play];
+    }
+    else
+    {
+        Sound* sound  = [self.idiocracySounds objectAtIndex:indexPath.row];
+        sound.tableView = tableView;
+        sound.indexPath = indexPath;
+        [sound.audioPlayer prepareToPlay];
+        [sound.audioPlayer play];
+    }
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0)
+    {
+        return @"Snatch";
+    }
+    else
+    {
+        return @"Idiocracy";
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 50.0f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel* label = [[UILabel alloc]init];
+    label.text = @"Snatch";
+    label.backgroundColor = [UIColor lightGrayColor];
+    label.textColor = [UIColor grayColor];
+    return label;
+}
+
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
