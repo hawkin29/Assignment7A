@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Sound.h"
 
-@interface MovieSoundViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface MovieSoundViewController : UIViewController <UITableViewDelegate,UITableViewDataSource, AVAudioPlayerDelegate>
 
 @end

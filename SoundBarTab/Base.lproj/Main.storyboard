@@ -97,11 +97,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QJx-iJ-2a8">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="SNATCH" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" id="QJx-iJ-2a8">
                                                     <rect key="frame" x="59" y="0.0" width="246" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="snatch.png" id="e8u-06-Dww">
@@ -148,13 +148,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="leading" secondItem="tA3-hf-qHE" secondAttribute="leading" id="8RP-rP-A5U"/>
-                            <constraint firstAttribute="bottom" secondItem="tA3-hf-qHE" secondAttribute="bottom" id="90u-FO-ePw"/>
-                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="top" secondItem="d89-fk-2yN" secondAttribute="bottom" id="JI4-51-C5e"/>
-                            <constraint firstAttribute="trailing" secondItem="tA3-hf-qHE" secondAttribute="trailing" id="KyZ-f1-P8E"/>
-                            <constraint firstItem="tA3-hf-qHE" firstAttribute="top" secondItem="Kgd-tb-9pq" secondAttribute="bottom" id="Scv-PO-USe"/>
-                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" id="lkK-qY-2aD"/>
-                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="trailing" secondItem="tA3-hf-qHE" secondAttribute="trailing" id="nq0-qb-zcx"/>
+                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="leading" secondItem="tA3-hf-qHE" secondAttribute="leading" id="1aP-2L-twM"/>
+                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="trailing" secondItem="tA3-hf-qHE" secondAttribute="trailing" id="Lil-TY-HJl"/>
+                            <constraint firstAttribute="trailing" secondItem="Kgd-tb-9pq" secondAttribute="trailing" id="P2p-Wt-z0g"/>
+                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" id="P66-bC-NHx"/>
+                            <constraint firstAttribute="bottom" secondItem="tA3-hf-qHE" secondAttribute="bottom" id="X2A-w8-NvL"/>
+                            <constraint firstItem="Kgd-tb-9pq" firstAttribute="top" secondItem="d89-fk-2yN" secondAttribute="bottom" id="qD7-qK-16K"/>
+                            <constraint firstItem="tA3-hf-qHE" firstAttribute="top" secondItem="Kgd-tb-9pq" secondAttribute="bottom" id="u4b-D0-L5Z"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>

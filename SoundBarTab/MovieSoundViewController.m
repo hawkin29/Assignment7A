@@ -14,7 +14,6 @@
 @property(nonatomic, strong) NSMutableArray* snatchSounds;
 @property(nonatomic, strong) NSMutableArray* idiocracySounds;
 @property(nonatomic, strong) Sound* sound;
-@property(nonatomic, strong) UIColor* color;
 @end
 
 @implementation MovieSoundViewController
@@ -48,7 +47,7 @@
     soundPath = [[NSBundle mainBundle] pathForResource:@"borisTheBulletDodger" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
-    name = @"Boris The Bullet Dodger";
+    name = @"Boris";
     sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.snatchSounds addObject:sound];
 
@@ -119,8 +118,6 @@
     
 }
 
-
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0)
@@ -141,8 +138,6 @@
         static NSString* CellIdentifier=@"Cell1";
         UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         cell.textLabel.text = [[self.snatchSounds objectAtIndex:indexPath.row] name];
-        self.color = cell.backgroundColor;
-        NSLog(@"%@",[cell.backgroundColor description]);
         return cell;
     }
     else
@@ -182,17 +177,17 @@
     return 2;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (section == 0)
-    {
-        return @"Snatch";
-    }
-    else
-    {
-        return @"Idiocracy";
-    }
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    if (section == 0)
+//    {
+//        return @"Snatch";
+//    }
+//    else
+//    {
+//        return @"Idiocracy";
+//    }
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -201,11 +196,27 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel* label = [[UILabel alloc]init];
-    label.text = @"Snatch";
-    label.backgroundColor = [UIColor lightGrayColor];
-    label.textColor = [UIColor grayColor];
-    return label;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15,0,300,44)];
+    
+    if (section == 0)
+    {
+        
+        label.text = @"    SNATCH";
+        label.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        label.textColor = [UIColor grayColor];
+        label.font = [UIFont boldSystemFontOfSize:10];
+        return label;
+
+    }
+    else
+    {
+        label.text = @"    IDIOCRACY";
+        label.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        label.textColor = [UIColor grayColor];
+        label.font = [UIFont boldSystemFontOfSize:10];
+        
+        return label;
+    }
 }
 
 
