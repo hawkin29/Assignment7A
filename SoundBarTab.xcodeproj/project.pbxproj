@@ -42,7 +42,7 @@
 		788F103D18D29565008998B4 /* starbucks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 788F103818D29565008998B4 /* starbucks.mp3 */; };
 		788F104418D29580008998B4 /* borisTheBulletDodger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 788F103F18D29580008998B4 /* borisTheBulletDodger.mp3 */; };
 		788F104518D29580008998B4 /* noWheels.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 788F104018D29580008998B4 /* noWheels.mp3 */; };
-		788F104618D29580008998B4 /* perrywinkleBlue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 788F104118D29580008998B4 /* perrywinkleBlue.mp3 */; };
+		788F104618D29580008998B4 /* periwinkleBlue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 788F104118D29580008998B4 /* periwinkleBlue.mp3 */; };
 		788F104718D29580008998B4 /* stayDown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 788F104218D29580008998B4 /* stayDown.mp3 */; };
 		788F104818D29580008998B4 /* sweetEnough.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 788F104318D29580008998B4 /* sweetEnough.mp3 */; };
 		788F104A18D29A8B008998B4 /* snatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F104918D29A8B008998B4 /* snatch.png */; };
@@ -103,7 +103,7 @@
 		788F103818D29565008998B4 /* starbucks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starbucks.mp3; sourceTree = "<group>"; };
 		788F103F18D29580008998B4 /* borisTheBulletDodger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = borisTheBulletDodger.mp3; sourceTree = "<group>"; };
 		788F104018D29580008998B4 /* noWheels.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = noWheels.mp3; sourceTree = "<group>"; };
-		788F104118D29580008998B4 /* perrywinkleBlue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = perrywinkleBlue.mp3; sourceTree = "<group>"; };
+		788F104118D29580008998B4 /* periwinkleBlue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = periwinkleBlue.mp3; sourceTree = "<group>"; };
 		788F104218D29580008998B4 /* stayDown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stayDown.mp3; sourceTree = "<group>"; };
 		788F104318D29580008998B4 /* sweetEnough.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sweetEnough.mp3; sourceTree = "<group>"; };
 		788F104918D29A8B008998B4 /* snatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snatch.png; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			children = (
 				788F103F18D29580008998B4 /* borisTheBulletDodger.mp3 */,
 				788F104018D29580008998B4 /* noWheels.mp3 */,
-				788F104118D29580008998B4 /* perrywinkleBlue.mp3 */,
+				788F104118D29580008998B4 /* periwinkleBlue.mp3 */,
 				788F104218D29580008998B4 /* stayDown.mp3 */,
 				788F104318D29580008998B4 /* sweetEnough.mp3 */,
 			);
@@ -373,7 +373,7 @@
 				374BF78E18CFC3D300175181 /* Main.storyboard in Resources */,
 				788F103C18D29565008998B4 /* theDoctor.mp3 in Resources */,
 				788F103018D2803C008998B4 /* appIcon1.png in Resources */,
-				788F104618D29580008998B4 /* perrywinkleBlue.mp3 in Resources */,
+				788F104618D29580008998B4 /* periwinkleBlue.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

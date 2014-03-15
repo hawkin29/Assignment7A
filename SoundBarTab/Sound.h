@@ -15,7 +15,6 @@
 @property(nonatomic, strong) UITableView* tableView;
 @property(nonatomic, strong) NSIndexPath* indexPath;
 
-
 -(id)initWithName:(NSString*)name audioPlayer:(AVAudioPlayer*)audioPlayer;
 
 @end

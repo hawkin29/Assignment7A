@@ -23,11 +23,8 @@
     [super viewDidLoad];
     self.snatchSounds = [[NSMutableArray alloc]init];
     self.idiocracySounds = [[NSMutableArray alloc]init];
-    [self addSounds];
-    
+    [self addSounds]; 
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -58,10 +55,10 @@
     sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.snatchSounds addObject:sound];
     
-    soundPath = [[NSBundle mainBundle] pathForResource:@"perrywinkleBlue" ofType:@"mp3"];
+    soundPath = [[NSBundle mainBundle] pathForResource:@"periwinkleBlue" ofType:@"mp3"];
     soundUrl = [NSURL fileURLWithPath:soundPath];
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundUrl error:&error];
-    name = @"Perrywinkle Blue";
+    name = @"Periwinkle Blue";
     sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.snatchSounds addObject:sound];
     
@@ -114,8 +111,6 @@
     sound = [[Sound alloc] initWithName:name audioPlayer:audioPlayer];
     [self.idiocracySounds addObject:sound];
     
-    
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -128,7 +123,6 @@
     {
         return [self.idiocracySounds count];
     }
-   
 }
 
 -(UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -138,6 +132,8 @@
         static NSString* CellIdentifier=@"Cell1";
         UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         cell.textLabel.text = [[self.snatchSounds objectAtIndex:indexPath.row] name];
+        cell.backgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+        cell.textLabel.textColor = [UIColor blackColor];
         return cell;
     }
     else
@@ -145,7 +141,7 @@
         static NSString* CellIdentifier=@"Cell2";
         UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         cell.textLabel.text = [[self.idiocracySounds objectAtIndex:indexPath.row] name];
-        
+        cell.backgroundView = [[UIView alloc] initWithFrame:cell.bounds];
         return cell;
     }
     
@@ -177,26 +173,14 @@
     return 2;
 }
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    if (section == 0)
-//    {
-//        return @"Snatch";
-//    }
-//    else
-//    {
-//        return @"Idiocracy";
-//    }
-//}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 50.0f;
+    return 25.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15,0,300,44)];
+    UILabel *label = [[UILabel alloc] init];
     
     if (section == 0)
     {
@@ -214,49 +198,8 @@
         label.backgroundColor = [UIColor groupTableViewBackgroundColor];
         label.textColor = [UIColor grayColor];
         label.font = [UIFont boldSystemFontOfSize:10];
-        
         return label;
     }
 }
 
-
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

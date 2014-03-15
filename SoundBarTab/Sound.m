@@ -16,7 +16,6 @@
     return [self initWithName:@"" audioPlayer:[[AVAudioPlayer alloc]init]];
 }
 
-
 -(id)initWithName:(NSString*)name audioPlayer:(AVAudioPlayer*)audioPlayer
 {
     self = [super init];
